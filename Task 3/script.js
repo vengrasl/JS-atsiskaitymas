@@ -28,14 +28,17 @@ button.addEventListener('click', (e) => {
     .then(res => res.json())
     .then(data => {
       data.forEach(item => {
+        const div = document.createElement('div');
+        div.setAttribute('class', 'infoDiv');
         const login = document.createElement('p');
         login.setAttribute('class', 'login');
         login.innerText = `login: ` + item.login;
-        output.append(login);
+        div.append(login);
           const avatarURL = document.createElement('img');
           avatarURL.setAttribute('class', 'avatar');
           avatarURL.src = item.avatar_url;
-          output.append(avatarURL);
+          div.append(avatarURL);
+          output.append(div);
       })
     })
 })

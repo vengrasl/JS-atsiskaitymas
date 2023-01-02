@@ -35,9 +35,9 @@ form.addEventListener('submit', (e) => {
   console.log(e);
   e.preventDefault();
   atsakymasKgToLb = kgToLb(inputKg.value);
-  kgToLbOutput.textContent = `${inputKg.value} kg. verčiant į svarus gauname: ` + atsakymasKgToLb + ` svarus`;
+  kgToLbOutput.textContent = `${inputKg.value} kg. verčiant į svarus gauname: ` + atsakymasKgToLb + ` svarus.`;
   atsakymaskgToG = kgToG(inputKg.value);
-  kgToGOutput.textContent = `${inputKg.value} kg. verčiant į gramus gauname: ` + atsakymaskgToG + ` gramus`;
+  kgToGOutput.textContent = `${inputKg.value} kg. verčiant į gramus gauname: ` + atsakymaskgToG + ` gramus.`;
   atsakymaskgToOz = kgToOz(inputKg.value);
-  kgToOzOutput.textContent = `${inputKg.value} kg. verčiant į unicjas gauname: ` + atsakymaskgToOz + ` uncijas`;
+  kgToOzOutput.textContent = `${inputKg.value} kg. verčiant į unicjas gauname: ` + atsakymaskgToOz + ` uncijas.`;
 })

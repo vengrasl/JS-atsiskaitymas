@@ -63,3 +63,20 @@
 .showNoMore {
   display: none;
 }
+.login {
+  text-align: center;
+}
+
+.avatar {
+  width: 200px;
+}
+
+.infoDiv{
+  border: 2px solid black;
+}
+
+#output {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
