@@ -22,11 +22,9 @@ fetch(ENDPOINT)
       brandName.textContent = item.brand
       console.log(brandName);
       output.append(brandName);
-      data.forEach(element => {
         const modelsName = document.createElement('p');
         modelsName.setAttribute('class', 'modelsName');
-        modelsName.textContent = element.models;
+        modelsName.textContent = item.models.join(", ");
         output.append(modelsName);
-      })
     })
   })
