@@ -17,14 +17,17 @@ fetch(ENDPOINT)
   .then(data => {
     console.log(data.brand)
     data.forEach(item => {
+      const div = document.createElement('div');
+      div.setAttribute('class', 'infoDiv');
       const brandName = document.createElement('h1');
       brandName.setAttribute('class', 'brandName');
-      brandName.textContent = item.brand
+      brandName.textContent = 'Car brand: ' + item.brand
       console.log(brandName);
-      output.append(brandName);
-        const modelsName = document.createElement('p');
-        modelsName.setAttribute('class', 'modelsName');
-        modelsName.textContent = item.models.join(", ");
-        output.append(modelsName);
+      div.append(brandName);
+      const modelsName = document.createElement('p');
+      modelsName.setAttribute('class', 'modelsName');
+      modelsName.textContent = 'Car Models: ' + item.models.join(", ");
+      div.append(modelsName);
+      output.append(div);
     })
   })
