@@ -31,12 +31,12 @@ button.addEventListener('click', (e) => {
       data.forEach(item => {
         const login = document.createElement('p');
         login.setAttribute('class', 'login');
-        login.innerHTML = `login: ` + item.login;
+        login.innerText = `login: ` + item.login;
         output.append(login);
         data.forEach(element => {
           const avatarURL = document.createElement('p');
           avatarURL.setAttribute('class', 'avatar');
-          avatarURL.innerHTML = element.avatar_url;
+          avatarURL.innerText = element.avatar_url;
           output.append(avatarURL);
         })
       })

@@ -10,3 +10,23 @@ bent minimalų stilių;
 -------------------------------------------------------------------------- */
 
 const ENDPOINT = 'cars.json';
+const output = document.querySelector('#output');
+
+fetch(ENDPOINT)
+  .then(res => res.json())
+  .then(data => {
+    console.log(data.brand)
+    data.forEach(item => {
+      const brandName = document.createElement('h1');
+      brandName.setAttribute('class', 'brandName');
+      brandName.textContent = item.brand
+      console.log(brandName);
+      output.append(brandName);
+      data.forEach(element => {
+        const modelsName = document.createElement('p');
+        modelsName.setAttribute('class', 'modelsName');
+        modelsName.textContent = element.models;
+        output.append(modelsName);
+      })
+    })
+  })
