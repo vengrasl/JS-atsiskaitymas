@@ -8,27 +8,21 @@ division() - priima du skaičius ir grąžina jų dalybos rezultatą;
 
 
 class Calculator {
-  constructor(numberOne, numberTwo){
-    this.numberOne = numberOne;
-    this.numberTwo = numberTwo;
+  static sum(numberOne, numberTwo){
+    return numberOne + numberTwo;
   }
-  sum(){
-    return this.numberOne + this.numberTwo;
+  static subtraction(numberOne, numberTwo){
+    return numberOne - numberTwo;
   }
-  subtraction(){
-    return this.numberOne - this.numberTwo;
+  static multiplication(numberOne, numberTwo){
+    return numberOne * numberTwo;
   }
-  multiplication(){
-    return this.numberOne * this.numberTwo;
-  }
-  division(){
-    return this.numberOne / this.numberTwo;
+  static division(numberOne, numberTwo){
+    return numberOne / numberTwo;
   }
 }
 
-let calculator = new Calculator(1, 2);
-
-console.log(calculator.sum());
-console.log(calculator.subtraction());
-console.log(calculator.multiplication());
-console.log(calculator.division());
+console.log(Calculator.sum(1, 2));
+console.log(Calculator.subtraction(1, 2));
+console.log(Calculator.multiplication(1, 2));
+console.log(Calculator.division(1, 2));
